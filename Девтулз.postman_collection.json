@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "bdb133d4-eabb-4974-b00d-281f22b58571",
+		"name": "Девтулз",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23533076"
+	},
+	"item": [
+		{
+			"name": "https://api.staya.dog/v1/auth/password/recovery/request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"brichkina2022@mail.ru\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.staya.dog/v1/auth/password/recovery/request",
+					"protocol": "https",
+					"host": [
+						"api",
+						"staya",
+						"dog"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"password",
+						"recovery",
+						"request"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

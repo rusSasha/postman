@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "5b61a726-0cef-4f02-8cfc-2feca18a2ad7",
+		"name": "Timetta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23533076"
+	},
+	"item": [
+		{
+			"name": "Токен",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.collectionVariables.set(\"token\", jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "external",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "all offline_access",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "NesterovA@test-task.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "gG9NfM",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://auth.timetta.com/connect/token",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"timetta",
+						"com"
+					],
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "запрос",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkUzQUJEMzAxNzdEMEZDNjU2RDg4MDRFOTQ2RUJFOTdCNTJBRUQ2MzhSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IjQ2dlRBWGZRX0dWdGlBVHBSdXZwZTFLdTFqZyJ9.eyJuYmYiOjE2Njk3MDM4MDcsImV4cCI6MTY2OTcwNzQwNywiaXNzIjoiaHR0cHM6Ly9hdXRoLnRpbWV0dGEuY29tIiwiYXVkIjoid29ya3BvaW50LWFwaSIsImNsaWVudF9pZCI6ImV4dGVybmFsIiwic3ViIjoiTmVzdGVyb3ZBQHRlc3QtdGFzay5ydSIsImF1dGhfdGltZSI6MTY2OTcwMzgwNywiaWRwIjoibG9jYWwiLCJuYW1lIjoi0JDQu9C10LrRgdCw0L3QtNGAINCd0LXRgdGC0LXRgNC-0LIiLCJ0ZW5hbnQiOiJ0ZXN0LXRhc2sucnUiLCJqdGkiOiJEQzNCOTQ4RUEyNUVGMDU4OTRBODMzMkMzMThENDVGMiIsImlhdCI6MTY2OTcwMzgwNywic2NvcGUiOlsiYWxsIiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInB3ZCJdfQ.Qm9P58AnzX-Tog1evNb7zr1uft4kUlJEi6p8O77lCZ50oUK2z9HxqeOam3aRmrBhhpb84ir44F19nJOJTIlUMwn5jecbILsV9YovtFCPDHdyEiDDscMXEGIxTucBWag_4BZ_ySimgUSlXuqcZzqzEm7GZUTJ9Y58IdmoEbGqhxlc3zqx9xl6MeEdCr_3Jk2VG4_xYVBJRYKU26pm_7XS-M0cyxulMSSPsaSa96HgsRMdOGHpWDrhFrawnoi8XI0hE_4eYymugF3QvnT7qgm4PMVg7vusTrBbR-G65b7zjIgESs2yNsU1hFgoCaxHxbIZrtCoIP_LHYY5eNuIK8-cwQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "88ECF4BF0A73ED6918619B09DF01786AF7EBD089CAA80E3E9C66625BB439FB2B",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.timetta.com/odata/ProjectBillingTypes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"timetta",
+						"com"
+					],
+					"path": [
+						"odata",
+						"ProjectBillingTypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "проект",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkUzQUJEMzAxNzdEMEZDNjU2RDg4MDRFOTQ2RUJFOTdCNTJBRUQ2MzhSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IjQ2dlRBWGZRX0dWdGlBVHBSdXZwZTFLdTFqZyJ9.eyJuYmYiOjE2Njk3MDU4ODQsImV4cCI6MTY2OTcwOTQ4NCwiaXNzIjoiaHR0cHM6Ly9hdXRoLnRpbWV0dGEuY29tIiwiYXVkIjoid29ya3BvaW50LWFwaSIsImNsaWVudF9pZCI6ImV4dGVybmFsIiwic3ViIjoiTmVzdGVyb3ZBQHRlc3QtdGFzay5ydSIsImF1dGhfdGltZSI6MTY2OTcwNTg4NCwiaWRwIjoibG9jYWwiLCJuYW1lIjoi0JDQu9C10LrRgdCw0L3QtNGAINCd0LXRgdGC0LXRgNC-0LIiLCJ0ZW5hbnQiOiJ0ZXN0LXRhc2sucnUiLCJqdGkiOiI3Njg4MzdDREI2RUVGQTRFMzgwNTlGOUEyODc3NjU5RSIsImlhdCI6MTY2OTcwNTg4NCwic2NvcGUiOlsiYWxsIiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInB3ZCJdfQ.qADIqo7xyY61ehwalk-wvLbLt0fNdVr0YeQ1Js4s_4UYZT2nrDKBxnauOXjCNFOg36OWoKT_jSffIgJ31Ct5EYb2NCdq3401k2fL7aW0OhF7mrjaCErZJL71l4dmSvpwMzq9Z7Rcghxa4VwQIbTuMrU5n4C50Ld4T_nZM_VSZVp6_B-9EWxAvKC4s4lqgcygbp_q1RXIdQ-KiqMFaeCpfp2GlW2085L6iNVRYiGCOsMP3BDCkY7CY-Pt3aJUByQ3Tf6SYwRG7CWTfIZ6CUiFkPnr6bRs0yoPSLoRSm8E3-dmF-DWGhyMwIMR5KhLWVJ7L4gpSZ3xcncik9jQFsXG4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Юлия Бричкина\",\r\n    \"billingTypeId\": \"4d1a525f-3abc-4871-a64a-349c1dd3cabf\",\r\n    \"managerId\": \"bcd753cc-0b80-47ae-a471-6ff7f06010e1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.timetta.com/odata/Projects",
+					"protocol": "https",
+					"host": [
+						"api",
+						"timetta",
+						"com"
+					],
+					"path": [
+						"odata",
+						"Projects"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "http_schema",
+			"value": "https",
+			"type": "string"
+		},
+		{
+			"key": "host",
+			"value": "app.timetta.com",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "8DC3C45FEB339678AAE9D2BF4BBB8E57201F57DB17B6D74E9C53947373A585AC",
+			"type": "string"
+		}
+	]
+}

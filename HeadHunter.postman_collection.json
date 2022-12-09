@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "6914b33f-76ad-4e39-9751-aa1a6d3b3fdf",
+		"name": "HeadHunter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23533076"
+	},
+	"item": [
+		{
+			"name": "Тестирование ПО",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hh.ru/suggests/skill_set?text=Тестирование пользовательского интерфейса",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"suggests",
+						"skill_set"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Тестирование пользовательского интерфейса"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Нижний Новгород",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hh.ru/metro/66",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"metro",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qa studio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hh.ru/employers/6017235",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"employers",
+						"6017235"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "доступные языки",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=r2t5uvjq435r4q7ib3vtdjq120",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.hh.ru/languages",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"languages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "негативне сценарии",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hh.ru/openapi/redoc?id=ADc123&city=Ярасловль#tag/Rabotodatel/paths/~1employers~1%7Bemployer_id%7D/get",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hh",
+						"ru"
+					],
+					"path": [
+						"openapi",
+						"redoc"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ADc123"
+						},
+						{
+							"key": "city",
+							"value": "Ярасловль"
+						}
+					],
+					"hash": "tag/Rabotodatel/paths/~1employers~1%7Bemployer_id%7D/get"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://yandex.ru/support/disk/",
+					"protocol": "https",
+					"host": [
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"support",
+						"disk",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
